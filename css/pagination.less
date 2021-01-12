@@ -1,0 +1,87 @@
+// out: false
+
+@import 'variables.less';
+@import 'mixins.less';
+
+.pagination__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.pagination__block {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    list-style: none;
+    margin: 0 0 15px 0;
+    padding: 0 20px;
+
+    & > .pagination__item a {
+        display: inline-block;
+        font-family: sans-serif;
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+        text-align: center;
+        line-height: 36px;
+        text-decoration: none;
+        color: #454c4d;
+        background-color: #e7eaeb;
+        border-radius: 6px;
+    }
+    &--solid > .pagination__item:first-child a {
+        background-color: #cacfd2;
+    }
+    &--solid > .pagination__item:last-child a {
+        background-color: #cacfd2;
+    }
+
+    &--solid--green > .pagination__item.active a {
+        background-color: @green;
+        color: #fff;
+    }
+    &--solid--yellow > .pagination__item.active a {
+        background-color: @yellow;
+        color: #fff;
+    }
+    &--solid--red > .pagination__item.active a {
+        background-color: @red;
+        color: #fff;
+    }
+    &--solid--blue > .pagination__item.active a {
+        background-color: @blue;
+        color: #fff;
+    }
+    &--solid--gray > .pagination__item.active a {
+        background-color: @gray;
+        color: #fff;
+    }
+
+    &--gradient > .pagination__item a {
+        .gradient(#f2f5f6, #daddde);
+        box-shadow: @btn-shadow-outline;
+    }
+
+    &--gradient--green > .pagination__item.active a {
+        .gradient(@green, @dark-green);
+        color: #fff;
+    }
+    &--gradient--yellow > .pagination__item.active a {
+        .gradient(@yellow, @dark-yellow);
+        color: #fff;
+    }
+    &--gradient--red > .pagination__item.active a {
+        .gradient(@red, @dark-red);
+        color: #fff;
+    }
+    &--gradient--blue > .pagination__item.active a {
+       .gradient(@blue, @dark-blue);
+        color: #fff;
+    }
+    &--gradient--gray > .pagination__item.active a {
+        .gradient(@gray, @dark-gray);
+        color: #fff;
+    }
+}

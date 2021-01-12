@@ -1,0 +1,79 @@
+// out: false
+
+@import 'variables.less';
+@import 'mixins.less';
+
+.buttons__block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+.btn {
+    width: 18%; 
+    margin: 1% 0;
+    height: 60px;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+    box-shadow: @btn-shadow-outline;
+
+    &--gradient-green {
+        .gradient(@green, @dark-green);
+    }
+    &--gradient-yellow {
+        .gradient(@yellow, @dark-yellow);
+    }
+    &--gradient-red {
+        .gradient(@red, @dark-red);
+    }
+    &--gradient-blue {
+        .gradient(@blue, @dark-blue);
+    }
+    &--gradient-gray {
+        .gradient(@gray, @dark-gray);
+    }
+    &--hover-green {
+        background-color: @green;
+        box-shadow: none;
+    }
+    &--hover-yellow {
+        background-color: @yellow;
+        box-shadow: none;
+    }
+    &--hover-red {
+        background-color: @red;
+        box-shadow: none;
+    }
+    &--hover-blue {
+        background-color: @blue;
+        box-shadow: none;
+    }
+    &--hover-gray {
+        background-color: @gray;
+        box-shadow: none;
+    }
+    &--focus-green {
+        background-color: @green;
+        box-shadow: @btn-shadow-inset;
+    }
+    &--focus-yellow {
+        background-color: @yellow;
+        box-shadow: @btn-shadow-inset;
+    }
+    &--focus-red {
+        background-color: @red;
+        box-shadow: @btn-shadow-inset;
+    }
+    &--focus-blue {
+        background-color: @blue;
+        box-shadow: @btn-shadow-inset;
+    }
+    &--focus-gray {
+        background-color: @gray;
+        box-shadow: @btn-shadow-inset;
+    }
+}
